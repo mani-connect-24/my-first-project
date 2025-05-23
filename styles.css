@@ -70,6 +70,7 @@ nav ul li a {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.9em;
+    transition: color 0.3s ease; /* Add transition */
 }
 
 nav ul li a:hover {
@@ -151,6 +152,12 @@ section h2 {
     margin-bottom: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+}
+
+#experience .job-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Enhanced shadow */
 }
 
 #experience .job-entry h3 {
@@ -206,6 +213,13 @@ section h2 {
     margin: 5px;
     border-radius: 20px; /* Rounded corners for tag appearance */
     font-size: 0.95em;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Add transition */
+}
+
+#skills ul li:hover {
+    background-color: #1D8A99; /* Teal background */
+    color: #FFFFFF; /* White text */
+    transform: translateY(-2px); /* Slight lift */
 }
 
 /* Certifications Section */
@@ -221,6 +235,12 @@ section h2 {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     font-size: 1.05em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+}
+
+#certifications ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* Enhanced shadow */
 }
 
 /* Education Section */
@@ -230,6 +250,12 @@ section h2 {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+}
+
+#education .education-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Enhanced shadow */
 }
 
 #education .education-entry h3 {
