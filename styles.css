@@ -578,57 +578,92 @@ html {
         font-size: 15px; /* Slightly smaller base font */
     }
 
+    /* Section Titles */
     section h2 {
-        font-size: 2em; /* Smaller section titles */
-        margin-bottom: 30px;
+        font-size: 2em; /* Adjusted from 2.5em */
+        margin-bottom: 30px; /* Adjusted from 40px */
     }
 
-    #home {
-        padding-top: 200px; /* Adjust for potentially taller stacked nav */
-    }
-
-    #home h1 {
-        font-size: 2.5em;
-    }
-
-    #home .tagline {
-        font-size: 1.2em;
-    }
-
+    /* Navigation Bar */
     header nav ul {
         flex-direction: column; /* Stack nav items */
         align-items: center;
     }
-
     header nav ul li {
         margin: 8px 0; /* Adjust margin for stacked items */
     }
-
-    #skills ul {
-        justify-content: center; /* Center skill tags if they wrap */
+    #home {
+        padding-top: 160px; /* Reduced padding-top to account for potentially shorter stacked nav */
     }
 
-    .job-entry ul {
-        margin-left: 15px; /* Reduced margin */
+
+    /* Home Section */
+    #home h1 {
+        font-size: 2.5em; /* Adjusted from 3em */
+    }
+    #home .tagline {
+        font-size: 1.3em; /* Adjusted from 1.5em */
     }
 
-    .job-entry ul li {
-        margin-bottom: 6px; /* Slightly reduced bottom margin */
-    }
-
-    /* Portfolio cards on tablet */
+    /* Card Content - General */
+    #experience .job-entry,
+    #education .education-entry,
+    #certifications ul li,
     .project-card {
-        flex-basis: calc(50% - 20px); /* Two cards per row, accounting for gap */
-        max-width: calc(50% - 20px); /* Ensure it doesn't exceed 50% */
+        padding: 15px; /* Standardized padding for cards */
+    }
+    #experience .job-entry h3,
+    #education .education-entry h3,
+    .project-card h3,
+    #certifications ul li { /* Target text directly for font size */
+        font-size: 1.3em; /* Harmonized card title font size */
+    }
+    #skills h3 { /* Skills section sub-titles */
+        font-size: 1.4em; /* Slightly larger than card titles */
     }
 
+
+    /* Job Entry Lists */
+    .job-entry ul {
+        margin-left: 15px; 
+        padding-left: 5px; /* Ensure bullet is visible with reduced margin */
+    }
+    .job-entry ul li {
+        margin-bottom: 6px; 
+    }
+
+    /* Button Sizes */
+    .view-more-btn { /* Portfolio buttons */
+        padding: 9px 18px;
+        font-size: 0.95em;
+    }
+    .btn-program, .btn-certificate { /* Certification buttons */
+        padding: 7px 13px; /* Existing is 6px 12px, slightly increase */
+        font-size: 0.88em; /* Existing is 0.85em, slightly increase */
+    }
+
+
+    /* Modal Content */
     .modal-content {
-        width: 85%; /* Wider modal on tablets */
-        margin: 15% auto; /* Adjust margin if needed */
+        width: 88%; /* Adjusted from 85% */
+        margin: 12% auto; /* Adjusted for better centering */
+    }
+    .modal-content h3#modal-title {
+        font-size: 1.7em; /* Adjusted from 2em */
+    }
+    .modal-content h4 {
+        font-size: 1.15em; /* Adjusted from 1.2em */
+    }
+    .modal-content p#modal-description {
+        font-size: 0.95em; /* Ensure readability */
     }
 
+    /* Swiper Slider */
     .swiper-slide img {
-        height: 350px; /* Adjust height for tablets */
+        height: 320px; /* Adjusted from 350px */
+    }
+    #event-highlights-slider p { /* Descriptive text for slider */
+        font-size: 1em;
     }
 }
 
@@ -638,88 +673,96 @@ html {
         font-size: 14px;
     }
 
+    /* Section Titles */
     section h2 {
-        font-size: 1.8em;
-        margin-bottom: 20px;
+        font-size: 1.7em; /* Adjusted from 1.8em */
+        margin-bottom: 25px; /* Adjusted from 20px */
     }
-
+    
+    /* Navigation Bar - Re-adjust home padding for potentially taller nav */
     #home {
-        padding-top: 260px; /* Further adjust for potentially taller stacked nav on small screens */
+         padding-top: 200px; /* Adjusted based on visual check of stacked nav height */
     }
 
+    /* Home Section */
     #home h1 {
-        font-size: 2em;
+        font-size: 2.1em; /* Adjusted from 2em */
     }
-
     #home .tagline {
-        font-size: 1em;
+        font-size: 1.1em; /* Adjusted from 1em */
     }
-
     #home .contact-info p,
     #home .contact-info a {
-        font-size: 1em;
+        font-size: 0.95em; /* Adjusted from 1em */
     }
 
-    #experience .job-entry { /* Adjusted from .job-entry for specificity */
-        padding: 15px;
+    /* Card Content - General */
+    #experience .job-entry,
+    #education .education-entry,
+    #certifications ul li,
+    .project-card {
+        padding: 12px; /* Slightly reduce padding for mobile */
+    }
+    #experience .job-entry h3,
+    #education .education-entry h3,
+    .project-card h3,
+    #certifications ul li { /* Target text directly for font size */
+        font-size: 1.2em; /* Harmonized card title font size for mobile */
+    }
+     #skills h3 { /* Skills section sub-titles */
+        font-size: 1.25em;
+    }
+    #skills ul li { /* Skill tags */
+        padding: 7px 13px; /* Adjusted from 6px 12px */
+        font-size: 0.88em; /* Adjusted from 0.9em */
     }
 
-    #experience .job-entry h3 { /* Adjusted from .job-entry h3 */
-        font-size: 1.5em;
+
+    /* Job Entry Lists */
+    .job-entry ul {
+        margin-left: 10px; 
+        padding-left: 5px; /* Ensure bullet is visible */
     }
 
-    #skills h3 {
-        font-size: 1.3em;
-    }
-
-    #skills ul li {
-        padding: 6px 12px;
+    /* Button Sizes */
+    .view-more-btn { /* Portfolio buttons */
+        padding: 8px 16px;
         font-size: 0.9em;
     }
-
-    #education .education-entry { /* Adjusted from .education-entry */
-        padding: 15px;
+    .btn-program,
+    .btn-certificate {
+        padding: 7px 13px; /* As per instruction */
+        font-size: 0.88em; /* As per instruction */
     }
 
-    #education .education-entry h3 { /* Adjusted from .education-entry h3 */
-        font-size: 1.3em;
-    }
-
-    .job-entry ul {
-        margin-left: 10px; /* Further reduced margin */
-    }
-
-    /* Portfolio cards on mobile */
-    .project-card {
-        flex-basis: 100%; /* One card per row */
-        max-width: 100%;
-    }
-
+    /* Modal Content */
     .modal-content {
-        width: 90%; /* Even wider modal on small mobiles */
-        margin: 20% auto; /* Adjust margin if needed */
-        padding: 20px;
+        width: 92%; /* Adjusted from 90% */
+        margin: 15% auto; /* Adjusted for better centering */
+        padding: 15px; /* Adjusted from 20px */
     }
-
     .modal-content h3#modal-title {
-        font-size: 1.5em;
+        font-size: 1.4em; /* Adjusted from 1.5em */
     }
     .modal-content h4 {
-        font-size: 1.1em;
+        font-size: 1.05em; /* Adjusted from 1.1em */
+    }
+    .modal-content p#modal-description {
+        font-size: 0.9em; /* Ensure readability */
     }
 
+    /* Swiper Slider */
     .swiper-slide img {
-        height: 280px; /* Adjust height for mobile */
+        height: 250px; /* Adjusted from 280px */
     }
-
     .swiper-button-prev,
     .swiper-button-next {
-        width: 36px;
-        height: 36px;
-        --swiper-navigation-size: 18px;
+        width: 34px; /* Adjusted from 36px */
+        height: 34px; /* Adjusted from 36px */
+        --swiper-navigation-size: 17px; /* Adjusted from 18px */
     }
-
-    #event-highlights-slider p {
-        font-size: 1em;
+    #event-highlights-slider p { /* Descriptive text for slider */
+        font-size: 0.95em; /* Adjusted from 1em */
+        margin-bottom: 20px; /* Slightly less for mobile */
     }
 }
