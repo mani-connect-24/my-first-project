@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manita Rana Magar - Portfolio</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -157,6 +158,77 @@
                 <p>Osaka Gakuin University, CET Osaka Japan</p>
             </article>
         </section>
+
+        <section id="portfolio" data-aos="fade-up" data-aos-once="true">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <article class="project-card">
+                    <h3>Sunday Suppers</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="view-more-btn" data-project-id="sunday-suppers">View More</button>
+                </article>
+                <article class="project-card">
+                    <h3>The Annual Retreat</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="view-more-btn" data-project-id="annual-retreat">View More</button>
+                </article>
+                <article class="project-card">
+                    <h3>International Cultural Festival</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="view-more-btn" data-project-id="international-cultural-festival">View More</button>
+                </article>
+                <article class="project-card">
+                    <h3>Global Leadership Program</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="view-more-btn" data-project-id="global-leadership-program">View More</button>
+                </article>
+                <article class="project-card">
+                    <h3>DiversiTEA & Coffee Hours</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="view-more-btn" data-project-id="diversitea-coffee-hours">View More</button>
+                </article>
+                <article class="project-card">
+                    <h3>Executive Speaker Series</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="view-more-btn" data-project-id="executive-speaker-series">View More</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="event-highlights-slider" data-aos="fade-up" data-aos-once="true">
+            <h2>Event Highlights</h2>
+            <p>A glimpse into some of our memorable moments and activities.</p>
+        
+            <div class="swiper-container event-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://via.placeholder.com/800x400/4CAF50/FFFFFF?Text=Retreat+Kickoff" alt="Retreat Kickoff">
+                        <div class="swiper-caption">Retreat Kickoff</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://via.placeholder.com/800x400/FF9800/FFFFFF?Text=BBQ+Picnic+Setup" alt="BBQ Picnic Setup">
+                        <div class="swiper-caption">BBQ Picnic Setup</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://via.placeholder.com/800x400/2196F3/FFFFFF?Text=Lake+Day+Activities" alt="Lake Day Activities">
+                        <div class="swiper-caption">Lake Day Activities</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://via.placeholder.com/800x400/9C27B0/FFFFFF?Text=Cultural+Fest+Performance" alt="Cultural Fest Performance">
+                        <div class="swiper-caption">Cultural Fest Performance</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://via.placeholder.com/800x400/E91E63/FFFFFF?Text=Team+Building+Workshop" alt="Team Building Workshop">
+                        <div class="swiper-caption">Team Building Workshop</div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Navigation -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Manita Rana Magar. All rights reserved.</p>
@@ -165,5 +237,23 @@
     <script>
       AOS.init();
     </script>
+
+    <div id="project-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-title">Project Title</h3>
+            <div id="modal-images">
+                <!-- Placeholder images will be added here by JavaScript -->
+            </div>
+            <h4>Full Description:</h4>
+            <p id="modal-description">Full project description will go here.</p>
+            <h4>Impact Metrics:</h4>
+            <ul id="modal-metrics">
+                <!-- Placeholder metrics will be added here by JavaScript -->
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

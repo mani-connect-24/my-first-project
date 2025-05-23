@@ -122,7 +122,9 @@ main { /* New rule to control main content width */
 section#experience,
 section#skills,
 section#certifications,
-section#education {
+section#education,
+section#portfolio,
+section#event-highlights-slider { /* Added #event-highlights-slider to this group */
     padding: 60px 20px;
     margin-top: 0;
     border-bottom: 1px solid #EEE;
@@ -133,6 +135,8 @@ section#experience { background-color: #F0F4F8; }
 section#skills { background-color: #FFFFFF; }
 section#certifications { background-color: #F0F4F8; }
 section#education { background-color: #FFFFFF; }
+section#portfolio { background-color: #F0F4F8; } 
+section#event-highlights-slider { background-color: #FFFFFF; } /* Alternating background for slider */
 
 
 /* Section Titles */
@@ -269,6 +273,237 @@ section h2 {
     color: #3E5F8A;
 }
 
+/* Portfolio Section */
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between cards */
+    justify-content: center; /* Center cards in the container */
+    padding: 10px; /* Optional: padding around the grid */
+}
+
+.project-card {
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 320px; /* Flex properties: grow, shrink, basis. Basis of 320px. */
+    max-width: 380px; /* Max width for a card on larger screens */
+    min-width: 280px; /* Min width for a card on smaller screens before wrapping aggressively */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    color: #1D8A99; /* Teal accent */
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Allows description to take available space, pushing button down */
+}
+
+.view-more-btn {
+    background-color: #0A2463; /* Deep Blue */
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #1D8A99; /* Teal accent */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Controlled by JS, inline style takes precedence initially */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 25px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 700px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation-name: modalFadeInScaleUp;
+    animation-duration: 0.4s;
+}
+
+@keyframes modalFadeInScaleUp {
+    from {opacity: 0; transform: scale(0.95);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    line-height: 1;
+    padding: 0;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h3#modal-title {
+    color: #0A2463;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.modal-content h4 {
+    color: #1D8A99;
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.modal-content p#modal-description {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.modal-content ul#modal-metrics {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+.modal-content ul#modal-metrics li {
+    margin-bottom: 8px;
+}
+
+#modal-images img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Event Highlights Slider Section */
+#event-highlights-slider h2 { /* Already covered by section h2 */
+    /* text-align: center; font-size: 2.5em; color: #0A2463; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1px; */
+}
+
+#event-highlights-slider p { /* Descriptive text */
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px auto; /* Center it and add bottom margin before slider */
+    font-size: 1.05em;
+}
+
+.swiper-container.event-swiper {
+    width: 100%;
+    padding: 10px 0 50px 0; /* Increased bottom padding for pagination */
+    position: relative; 
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 450px; /* Adjusted height */
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+.swiper-caption {
+    text-align: center;
+    padding: 12px; /* Adjusted padding */
+    font-size: 0.95em;
+    color: #FFFFFF; /* White text for better contrast on dark overlay */
+    background-color: rgba(0, 0, 0, 0.6); /* Darker semi-transparent background */
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom-left-radius: 8px; 
+    border-bottom-right-radius: 8px; 
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #0A2463; 
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly less transparent */
+    border-radius: 50%; 
+    width: 44px;  /* Slightly larger */
+    height: 44px; /* Slightly larger */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    --swiper-navigation-size: 22px; /* Slightly larger arrows */
+    /* Swiper handles line-height and text-align for its default ::after pseudo-elements */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #0A2463; 
+    color: #FFFFFF; 
+}
+
+/* Swiper default positioning usually works well, but can be adjusted if needed: */
+/* .swiper-button-prev { left: 10px; } */
+/* .swiper-button-next { right: 10px; } */
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px !important; /* Ensure it's above the container padding */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+    background-color: #0A2463; 
+    width: 10px;
+    height: 10px;
+    opacity: 0.6; /* Slightly less opaque */
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #1D8A99; 
+    opacity: 1;
+}
+
+
 /* Footer */
 body > footer {
     text-align: center;
@@ -325,6 +560,29 @@ html {
     #skills ul {
         justify-content: center; /* Center skill tags if they wrap */
     }
+
+    .job-entry ul {
+        margin-left: 15px; /* Reduced margin */
+    }
+
+    .job-entry ul li {
+        margin-bottom: 6px; /* Slightly reduced bottom margin */
+    }
+
+    /* Portfolio cards on tablet */
+    .project-card {
+        flex-basis: calc(50% - 20px); /* Two cards per row, accounting for gap */
+        max-width: calc(50% - 20px); /* Ensure it doesn't exceed 50% */
+    }
+
+    .modal-content {
+        width: 85%; /* Wider modal on tablets */
+        margin: 15% auto; /* Adjust margin if needed */
+    }
+
+    .swiper-slide img {
+        height: 350px; /* Adjust height for tablets */
+    }
 }
 
 /* Mobile Specific Adjustments */
@@ -378,5 +636,43 @@ html {
 
     #education .education-entry h3 { /* Adjusted from .education-entry h3 */
         font-size: 1.3em;
+    }
+
+    .job-entry ul {
+        margin-left: 10px; /* Further reduced margin */
+    }
+
+    /* Portfolio cards on mobile */
+    .project-card {
+        flex-basis: 100%; /* One card per row */
+        max-width: 100%;
+    }
+
+    .modal-content {
+        width: 90%; /* Even wider modal on small mobiles */
+        margin: 20% auto; /* Adjust margin if needed */
+        padding: 20px;
+    }
+
+    .modal-content h3#modal-title {
+        font-size: 1.5em;
+    }
+    .modal-content h4 {
+        font-size: 1.1em;
+    }
+
+    .swiper-slide img {
+        height: 280px; /* Adjust height for mobile */
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 36px;
+        height: 36px;
+        --swiper-navigation-size: 18px;
+    }
+
+    #event-highlights-slider p {
+        font-size: 1em;
     }
 }
