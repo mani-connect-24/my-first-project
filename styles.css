@@ -47,7 +47,7 @@ body > header {
 }
 
 header nav {
-    max-width: 1100px;
+    max-width: 1320px; /* Was 1100px */
     margin: 0 auto; /* Center nav content */
     display: flex; /* Added to help center the ul if needed, or just for consistency */
     justify-content: center; /* Center the ul within the nav */
@@ -110,6 +110,11 @@ nav ul li a:hover {
 
 #home .contact-info a {
     color: #1D8A99; /* Teal */
+}
+
+main { /* New rule to control main content width */
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
 /* Common Section Styling */
