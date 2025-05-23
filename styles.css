@@ -1,0 +1,351 @@
+/* Basic Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F8F9FA; /* Light grey background */
+    color: #333; /* Default text color */
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #0A2463; /* Deep blue for headings */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: #1D8A99; /* Teal for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container { /* Optional container for centering content */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar */
+body > header {
+    background-color: #0A2463; /* Deep blue background */
+    color: #FFFFFF; /* White text */
+    padding: 1em 0;
+    position: fixed; /* Fixed header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header nav {
+    max-width: 1100px;
+    margin: 0 auto; /* Center nav content */
+    display: flex; /* Added to help center the ul if needed, or just for consistency */
+    justify-content: center; /* Center the ul within the nav */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center items within the ul */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+nav ul li a:hover {
+    color: #1D8A99; /* Teal accent on hover */
+    text-decoration: none;
+}
+
+/* Home/Hero Section */
+#home {
+    padding-top: 100px; /* Account for fixed header height */
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFFFF; /* White background for contrast */
+    padding-bottom: 40px;
+}
+
+#home h1 {
+    font-size: 3em;
+    color: #0A2463;
+    margin-bottom: 0.2em;
+}
+
+#home .tagline {
+    font-size: 1.5em;
+    color: #3E5F8A; /* Lighter professional blue */
+    margin-bottom: 1em;
+}
+
+#home .contact-info p,
+#home .contact-info a {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+#home .contact-info a {
+    color: #1D8A99; /* Teal */
+}
+
+/* Common Section Styling */
+section#experience,
+section#skills,
+section#certifications,
+section#education {
+    padding: 60px 20px;
+    margin-top: 0;
+    border-bottom: 1px solid #EEE;
+}
+
+/* Specific background colors for sections */
+section#experience { background-color: #F0F4F8; }
+section#skills { background-color: #FFFFFF; }
+section#certifications { background-color: #F0F4F8; }
+section#education { background-color: #FFFFFF; }
+
+
+/* Section Titles */
+section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #0A2463; /* Deep Blue */
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Work Experience Section */
+#experience .job-entry {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+#experience .job-entry h3 {
+    color: #1D8A99; /* Teal accent for job titles */
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+#experience .job-entry .company-location {
+    font-weight: 600;
+    color: #3E5F8A; /* Lighter Professional Blue */
+    margin-bottom: 5px;
+}
+
+#experience .job-entry .dates {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#experience .job-entry ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+#experience .job-entry ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* Skills Section */
+#skills h3 { /* Subheadings like "Core Competencies" */
+    color: #1D8A99; /* Teal accent */
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #EEE;
+    padding-bottom: 5px;
+}
+
+#skills ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+    display: flex; 
+    flex-wrap: wrap; 
+}
+
+#skills ul li {
+    background-color: #E9ECEF; /* Light grey background for skill items */
+    color: #0A2463;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px; /* Rounded corners for tag appearance */
+    font-size: 0.95em;
+}
+
+/* Certifications Section */
+#certifications ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#certifications ul li {
+    background-color: #FFFFFF;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-size: 1.05em;
+}
+
+/* Education Section */
+#education .education-entry {
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+#education .education-entry h3 {
+    color: #1D8A99; /* Teal accent */
+    font-size: 1.6em;
+    margin-bottom: 5px;
+}
+
+#education .education-entry p {
+    margin-bottom: 5px;
+    color: #3E5F8A;
+}
+
+/* Footer */
+body > footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #0A2463; /* Deep Blue, same as header */
+    color: #FFFFFF; /* White text */
+    margin-top: 0; 
+    font-size: 0.9em;
+}
+
+/* Final Touches & Review */
+html {
+    scroll-behavior: smooth;
+}
+
+.job-entry ul {
+    max-width: 750px; /* Improve readability on wide screens */
+}
+
+/* Responsive Design - Media Queries */
+
+/* General Adjustments for Smaller Screens (e.g., tablets and below) */
+@media (max-width: 768px) {
+    body {
+        font-size: 15px; /* Slightly smaller base font */
+    }
+
+    section h2 {
+        font-size: 2em; /* Smaller section titles */
+        margin-bottom: 30px;
+    }
+
+    #home {
+        padding-top: 200px; /* Adjust for potentially taller stacked nav */
+    }
+
+    #home h1 {
+        font-size: 2.5em;
+    }
+
+    #home .tagline {
+        font-size: 1.2em;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack nav items */
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 8px 0; /* Adjust margin for stacked items */
+    }
+
+    #skills ul {
+        justify-content: center; /* Center skill tags if they wrap */
+    }
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    #home {
+        padding-top: 260px; /* Further adjust for potentially taller stacked nav on small screens */
+    }
+
+    #home h1 {
+        font-size: 2em;
+    }
+
+    #home .tagline {
+        font-size: 1em;
+    }
+
+    #home .contact-info p,
+    #home .contact-info a {
+        font-size: 1em;
+    }
+
+    #experience .job-entry { /* Adjusted from .job-entry for specificity */
+        padding: 15px;
+    }
+
+    #experience .job-entry h3 { /* Adjusted from .job-entry h3 */
+        font-size: 1.5em;
+    }
+
+    #skills h3 {
+        font-size: 1.3em;
+    }
+
+    #skills ul li {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+
+    #education .education-entry { /* Adjusted from .education-entry */
+        padding: 15px;
+    }
+
+    #education .education-entry h3 { /* Adjusted from .education-entry h3 */
+        font-size: 1.3em;
+    }
+}
