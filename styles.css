@@ -80,38 +80,77 @@ nav ul li a:hover {
 
 /* Home/Hero Section */
 #home {
-    padding-top: 100px; /* Account for fixed header height */
+    padding-top: 100px; 
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background-color: #FFFFFF; /* White background for contrast */
+    text-align: center; /* h1 and contact-info will inherit this */
+    background-color: #FFFFFF; 
     padding-bottom: 40px;
 }
 
 #home h1 {
     font-size: 3em;
     color: #0A2463;
-    margin-bottom: 0.2em;
+    margin-bottom: 25px; /* Adjusted margin */
 }
 
-#home .tagline {
-    font-size: 1.5em;
-    color: #3E5F8A; /* Lighter professional blue */
-    margin-bottom: 1em;
+.hero-content-wrapper {
+    display: flex;
+    align-items: center; 
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+    margin: 20px 0; 
+    max-width: 900px; 
+    width: 100%; 
+}
+
+.hero-image {
+    flex: 1 1 200px; 
+    max-width: 200px; 
+    text-align: center; 
+    padding: 10px; 
+}
+
+.hero-image img {
+    width: 180px; 
+    height: 180px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.hero-text {
+    flex: 2 1 400px; 
+    max-width: 600px; 
+    text-align: left; /* Override center align from #home */
+}
+
+.hero-text p { 
+    font-size: 1.1em; 
+    line-height: 1.7;
+    color: #333; 
+    margin-bottom: 0; 
+}
+
+#home .contact-info { /* Ensure this specific selector is used */
+    font-size: 1.1em;
+    margin-top: 25px; /* Adjusted margin */
 }
 
 #home .contact-info p,
 #home .contact-info a {
-    font-size: 1.1em;
-    margin: 5px 0;
+    margin: 5px 0; /* Keep original inner margins for p and a */
 }
 
 #home .contact-info a {
     color: #1D8A99; /* Teal */
 }
+
+/* Removed #home .tagline as it's no longer in HTML */
 
 main { /* New rule to control main content width */
     max-width: 1320px;
@@ -599,11 +638,23 @@ html {
 
     /* Home Section */
     #home h1 {
-        font-size: 2.5em; /* Adjusted from 3em */
+        font-size: 2.5em; /* From existing responsive rules, confirm it's good */
     }
-    #home .tagline {
-        font-size: 1.3em; /* Adjusted from 1.5em */
+    .hero-content-wrapper {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center items when stacked */
+        text-align: center; /* Center text within hero-text when stacked */
     }
+    .hero-image {
+        margin-bottom: 20px; /* Space between image and text when stacked */
+    }
+    .hero-text {
+        text-align: center; /* Center the bio text when stacked */
+    }
+    .hero-text p {
+        font-size: 1em; /* Adjust if needed for tablets/mobile */
+    }
+
 
     /* Card Content - General */
     #experience .job-entry,
@@ -688,8 +739,13 @@ html {
     #home h1 {
         font-size: 2.1em; /* Adjusted from 2em */
     }
-    #home .tagline {
-        font-size: 1.1em; /* Adjusted from 1em */
+    /* .hero-content-wrapper is already flex-direction: column from 768px */
+    .hero-image img {
+        width: 150px;
+        height: 150px;
+    }
+    .hero-text p {
+        font-size: 0.95em; /* Adjust from 1em on tablet */
     }
     #home .contact-info p,
     #home .contact-info a {
