@@ -247,6 +247,53 @@ section h2 {
     box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* Enhanced shadow */
 }
 
+.certification-links {
+    margin-top: 10px; /* Space above the buttons */
+    display: flex; /* Arrange buttons in a row */
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens if needed */
+    gap: 10px; /* Space between buttons */
+}
+
+.btn-program,
+.btn-certificate {
+    display: inline-block; 
+    padding: 6px 12px; /* Smaller padding than main buttons */
+    font-size: 0.85em; /* Smaller font size */
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none; /* Remove underline from links */
+    color: #FFFFFF; /* White text */
+    border: 1px solid transparent; 
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Specific colors for Program Details button */
+.btn-program {
+    background-color: #1D8A99; /* Teal accent */
+    border-color: #1D8A99;
+}
+
+.btn-program:hover {
+    background-color: #177A85; /* Darker Teal */
+    border-color: #177A85;
+    transform: translateY(-1px);
+}
+
+/* Specific colors for View Certificate button */
+.btn-certificate {
+    background-color: #0A2463; /* Deep Blue */
+    border-color: #0A2463;
+}
+
+.btn-certificate:hover {
+    background-color: #071A40; /* Darker Deep Blue */
+    border-color: #071A40;
+    transform: translateY(-1px);
+}
+
+
 /* Education Section */
 #education .education-entry {
     background-color: #FFFFFF;
