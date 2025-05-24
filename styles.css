@@ -35,15 +35,16 @@ a:hover {
 
 /* Navigation Bar */
 body > header {
-    background-color: #0A2463; /* Deep blue background */
-    color: #FFFFFF; /* White text */
+    background-color: transparent; /* Changed from #0A2463 */
+    /* color: #FFFFFF; */ /* Link color set directly */
     padding: 1em 0;
     position: fixed; /* Fixed header */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000; /* Ensure it's above other content */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); */ /* Removed default shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth change on scroll */
 }
 
 header nav {
@@ -66,11 +67,11 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #FFFFFF;
+    color: #0A2463; /* Changed from #FFFFFF */
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: none; /* Changed from uppercase */
     font-size: 0.9em;
-    transition: color 0.3s ease; /* Add transition */
+    transition: color 0.3s ease; 
 }
 
 nav ul li a:hover {

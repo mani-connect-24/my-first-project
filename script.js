@@ -146,4 +146,24 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.event-swiper .swiper-button-prev', // Selector for prev button
         },
     });
+
+    // Navigation bar scroll effect
+    const header = document.querySelector('body > header');
+    const scrollThreshold = 50; // Pixels to scroll before changing header style
+
+    if (header) { // Check if header element exists
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Optional: Check initial scroll position on page load
+        // This handles cases where the page is loaded already scrolled down (e.g., after a refresh)
+        if (window.scrollY > scrollThreshold) {
+            header.classList.add('header-scrolled');
+        }
+    }
 });
